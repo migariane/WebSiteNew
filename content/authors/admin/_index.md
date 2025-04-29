@@ -37,7 +37,7 @@ profiles:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=lA11XToAAAAJ&hl=en
   - icon: academicons/orcid
-    url: https://orcid.org/0000-0001-6683
+    url: https://orcid.org/0000-0001-6683-5164
 
 interests:
   - Biostatistics and Epidemiology
