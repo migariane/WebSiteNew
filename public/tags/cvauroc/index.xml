@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cvauroc on MALF</title>
+    <link>http://localhost:1313/tags/cvauroc/</link>
+    <description>Recent content in Cvauroc on MALF</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2025 Miguel Angel Luque-Fernandez</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cvauroc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cvAUROC</title>
+      <link>http://localhost:1313/project/cvauroc/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/project/cvauroc/</guid>
+      <description>cvAUROC is a Stata program that implements k-fold cross-validation for the AUC for a binary outcome after fitting a logistic regression model. Evaluating the predictive performance (AUC) of a set of independent variables using all cases from the original analysis sample tends to result in an overly optimistic estimate of predictive performance. K-fold cross-validation can be used to generate a more realistic estimate of predictive performance.</description>
+    </item>
+  </channel>
+</rss>

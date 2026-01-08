@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on MALF</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on MALF</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2025 Miguel Angel Luque-Fernandez</copyright>
+    <lastBuildDate>Mon, 11 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dmif</title>
+      <link>http://localhost:1313/tags/dmif/</link>
+      <pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dmif/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hetmor</title>
+      <link>http://localhost:1313/tags/hetmor/</link>
+      <pubDate>Sat, 08 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/hetmor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Collider</title>
+      <link>http://localhost:1313/tags/collider/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/collider/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cci</title>
+      <link>http://localhost:1313/tags/cci/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cci/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cvauroc</title>
+      <link>http://localhost:1313/tags/cvauroc/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cvauroc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Elmpce</title>
+      <link>http://localhost:1313/tags/elmpce/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/elmpce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TMLE</title>
+      <link>http://localhost:1313/tags/tmle/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tmle/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
