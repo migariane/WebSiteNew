@@ -1,9 +1,9 @@
-baseURL = "https://maluque.netifly.app/"
+baseURL = "https://maluque.netlify.app/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "MALF"
 author = "Miguel Angel Luque-Fernandez"
-copyright = "&copy; 2025 Miguel Angel Luque-Fernandez" # set to override the auto generated copyright using org info and now year
+copyright = "&copy; 2025-2026 Miguel Angel Luque-Fernandez" # set to override the auto generated copyright using org info and now year
 googleAnalytics = "UA-112070331-1"
 #disqusShortname = "" # see params.comments to use utterances or giscus instead of Disqus
 metaDataFormat = "yaml"
@@ -31,7 +31,7 @@ enableEmoji = true
 [params]
   orgName = "University of Granada"
   orgLocal = "Division of Biostatistics, Department of Statistics and Operations Research"
-  description = "My academic website"
+  description = "Associate Professor of Biostatistics — Causal Inference, Epidemiological Methods, and Statistical Software"
   favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
   mainSections = ["publications", "projects", "talks"]
@@ -44,7 +44,7 @@ enableEmoji = true
   # Place image file in `static` folder and specify image name here.
   sharing_image = "/img/papillons.jpg"
   # Twitter username (without @). Used when a visitor shares your site on Twitter.
-  twitter = "apreshill"
+  twitter = "watzilei"
   
   # use a built-in color theme
   # one of: earth / forest / grayscale / magma / paper / peach / plum /
@@ -105,7 +105,7 @@ enableEmoji = true
   # Icon pack "far" includes regular icons, see: https://fontawesome.com/icons?d=gallery&s=regular&m=free
  [[params.social]]
     icon = "envelope"
-    icon_pack = "fab"
+    icon_pack = "fas"
     url = "mailto:mluquefe@ugr.es"
 
   [[params.social]]
@@ -120,8 +120,8 @@ enableEmoji = true
 
   [[params.social]]
     icon = "github"
-    icon_pack = "fa"
-    link = "//github.com/migariane"
+    icon_pack = "fab"
+    url = "//github.com/migariane"
   
   [[params.social]]
     icon      = "orcid" # icon name without the 'fa-'
@@ -166,21 +166,21 @@ enableEmoji = true
     url = "home/contact"
     weight = 6
     
-  # Configure footer  
+  # Configure footer
   [[menu.footer]]
-    name = "License"
-    title = "License"
-    url = "/license/"
+    name = "Tutorials"
+    title = "Statistical Tutorials"
+    url = "https://migariane.github.io"
     weight = 1
   [[menu.footer]]
-    name = "Contact"
-    title = "Contact form"
-    url = "/contact/"
+    name = "GitHub"
+    title = "GitHub"
+    url = "https://github.com/migariane"
     weight = 2
   [[menu.footer]]
-    name = "Contributors"
-    title = "Contributors"
-    url = "/contributors/"
+    name = "Google Scholar"
+    title = "Google Scholar"
+    url = "https://scholar.google.es/citations?user=lA11XToAAAAJ&hl"
     weight = 3
 
 # see https://gohugo.io/about/hugo-and-gdpr/    

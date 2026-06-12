@@ -56,7 +56,11 @@ filter_default = 0
 
 [[filter]]
   name = "DMIF"
-  tag = ".dmif" 
+  tag = ".dmif"
+
+[[filter]]
+  name = "Conformal"
+  tag = ".conformal"
 
 +++
 

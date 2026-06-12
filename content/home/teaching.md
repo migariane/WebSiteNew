@@ -15,28 +15,55 @@ weight = 60
 
 +++
 
-I am a Distance Learning Module Organizer for the MSc in Epidemiology at the LSHTM and I teach in the following short courses:
+I am an Associate Professor of Biostatistics at the University of Granada (Department of Statistics and Operations Research) and a Distance Learning Module Organizer for the MSc in Epidemiology at the LSHTM.
 
-- EPM304 Advanced Statistical Methods in Epidemiology
+## Courses
 
-- Short Course: Introduction to Survival Analysis in Cancer Epidemiology: https://github.com/migariane/SVA-ULB
+- **EPM304** — Advanced Statistical Methods in Epidemiology (LSHTM)
+- **Short Course: Introduction to Survival Analysis in Cancer Epidemiology** — [GitHub repo](https://github.com/migariane/SVA-ULB)
+- **Introduction to Causal Inference and the Potential Outcomes Framework** — [Course site](https://ccci.netlify.app/)
+- **Computational Causal Inference and Estimation using Stata** (LSHTM) — [Tutorial](https://migariane.github.io/CIM.html)
 
-- Introduction to Causal Inference and the Potential Outcomes Framework: https://ccci.netlify.app/  
+## Tutorials & Open-Access Materials
 
-- Computational Casusal Inference and Estimation using STATA (LSHTM): https://migariane.github.io/CIM.html
+### 🎓 Featured: Conformal Statistical Inference
+Comprehensive tutorials from theory to practice — marginal coverage guarantees, split conformal prediction (SCP), conformal quantile regression (CQR), full conformal, and Jackknife+.
 
-Also, I am developing software for teaching and scientific interests:  
+- **[Comprehensive Guide (EN)](https://migariane.github.io/ConformalInferenceExplained.html)** — Interactive notebook covering theory and implementation
+- **[Tutorial Slides (ES)](https://migariane.github.io/ConformalPrediction_Tutorial_ES.html)** — Structured lecture slides in Spanish (NEW)
 
-- [Link to Software](https://migariane.github.io/)
+### Causal Inference & TMLE
 
-- [Shiny App: Parametrical Survival Distributions](https://watzile.shinyapps.io/miguel_angel_luque_fernandez/)
+- **[TMLE in practice with R](https://migariane.github.io/TMLE.nb.html)** — Step-by-step TMLE implementation with influence functions, fluctuation steps, and variance estimation
+- **[Applied Computational Causal Inference using Stata](https://migariane.github.io/CIM.html)** — Doubly robust methods, AIPW, and TMLE in Stata using the `eltmle` command
+- **[Las matemáticas detrás de TMLE (ES)](https://migariane.github.io/Maths_TMLE-IF.html)** — Mathematical derivation of TMLE in Spanish: influence functions, semiparametric theory
+- **[Delta Method Tutorial](https://migariane.github.io/DeltaMethodEpiTutorial.nb.html)** — Variance estimation using the delta method for epidemiological estimands (R notebook)
+- **[ELTMLE: One Simulation](https://migariane.github.io/eltmle_one_sim.html)** — Stata simulation comparing `eltmle` vs competitors (2017 SUGM)
 
-- [Shiny App: Colliders in Epidemiology](https://watzile.shinyapps.io/EpiCollider/)
+### Survival Analysis
 
-- [Shiny App: Expected Date of Delivery](https://watzile.shinyapps.io/dateofdelivery__/)
+- **[Introduction to Time-to-Event Analysis](https://migariane.github.io/Tutorial-SVA-ULB.html)** — Kaplan-Meier, log-rank tests, and Cox models (ULB workshop)
+- **[Net Survival: Cohort Analysis](https://migariane.github.io/Cohort.html)** — Standardization of net survival under the relative survival framework (Stata)
+- **[Net Survival: STRS & Poisson Regression](https://migariane.github.io/TutorialOne.html)** — Modeling net survival using STRS and Poisson regression (Stata)
+- **[Net Survival: Flexible Parametric Modeling](https://migariane.github.io/TutorialTwo.html)** — Royston-Parmar flexible parametric survival models (Stata)
 
-- [Shiny App: Cancer comorbidities](http://watzilei.com/shiny/CoMCoR/)
+### Machine Learning
 
-- [Cross-validation Tutorial](https://migariane.github.io/CrossValidation.nb.html)
+- **[Cross-Validation in Practice with R](https://migariane.github.io/CrossValidation.nb.html)** — K-fold CV, LOOCV, and bootstrap resampling for model selection
 
-- [Standardized Net Surival](https://migariane.github.io/Cohort.html)
+## Interactive Shiny Apps
+
+- [Parametric Survival Distributions](https://watzile.shinyapps.io/miguel_angel_luque_fernandez/)
+- [Colliders in Epidemiology](https://watzile.shinyapps.io/EpiCollider/)
+- [Expected Date of Delivery](https://watzile.shinyapps.io/dateofdelivery__/)
+- [Cancer Comorbidities Network](http://watzilei.com/shiny/CoMCoR/)
+
+## Stata Packages
+
+- **[eltmle](https://github.com/migariane/meltmle)** — Targeted Maximum Likelihood Estimation for the ATE with SuperLearner integration
+- **[cvAUROC](https://github.com/migariane/cvAUROC)** — Cross-validated AUC with bootstrap confidence intervals
+- **[cmatch](https://github.com/migariane/cmatch)** — Tabulation of matched pairs in 1:1 matched case-control studies
+
+---
+
+📚 **All tutorials:** [migariane.github.io](https://migariane.github.io)
