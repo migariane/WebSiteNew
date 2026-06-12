@@ -6,3 +6,6 @@
 public/
 resources/
 .positai
+
+# Local Netlify folder
+.netlify
