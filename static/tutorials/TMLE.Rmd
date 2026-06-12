@@ -104,7 +104,7 @@ consistency or stable unit treatment value assignment (SUTVA)
 
 # The G-Formula and ATE estimation
 
-$$\psi(P_{0})\,=\,\sum_{w}\,\left[\sum_{y}\,P(Y=y\mid A=1,W=w)-\,\sum_{y}\,P(Y = y\mid A=0,W=w)\right]P(W=w)$$
+$$\psi(P_{0})\,=\,\sum_{w}\,\left[\sum_{y}\,y\,P(Y=y\mid A=1,W=w)-\,\sum_{y}\,y\,P(Y = y\mid A=0,W=w)\right]P(W=w)$$
 
 where,
 
@@ -388,20 +388,20 @@ This step aims to find a better prediction model targeted at minimising
 the mean squared error (MSE) for the potential outcomes. For the ATE on
 step convergence is guaranteed given $\bar{Q}^{0}$ and $\hat{g}(1,W)$.
 
-The fluctuation parameters $(\hat{\epsilon}_{0}\,,\,\hat{\epsilon}_{1})$
-are estimated using maximum likelihood procedures by setting
-$\text{logit}(\bar{Q^{0}}(A,W))$ as an offset in a intercept-free
-logistic regression with $H_{0}$ and $H_{1}$ as independent variables:
+The fluctuation parameter $\hat{\epsilon}$ is estimated using maximum likelihood
+by setting $\text{logit}(\bar{Q^{0}}(A,W))$ as an offset in a intercept-free
+logistic regression with the **clever covariate** $H(A,W)$ as independent variable:
 
-$$\bar{Q^{1}}(A,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(A, W)\right)\,+\,\hat{\epsilon_{0}}H_{0}(A,W)\,+\,\hat{\epsilon_{1}}H_{1}(A,W)\right]  (5)$$
-$$\bar{Q^{1}}(0,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(A,W)\right)\,+\,\hat{\epsilon_{0}}H_{0}(0,W)\right]$$
+$$\bar{Q^{1}}(A,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(A, W)\right)\,+\,\hat{\epsilon}\,H(A,W)\right] \qquad (5)$$
 
-$$\bar{Q^{1}}(1,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(A,W)\right)\,+\,\hat{\epsilon_{1}}H_{1}(1,W)\right]$$
+$$\bar{Q^{1}}(0,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(0,W)\right)\,+\,\hat{\epsilon}\,H(0,W)\right]$$
+
+$$\bar{Q^{1}}(1,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(1,W)\right)\,+\,\hat{\epsilon}\,H(1,W)\right]$$
 Where,
-$$H_{0}(A,W)\,=\,-\frac{I(A=0)}{\hat{g}(0|W)}\;\text{and},\;H_{1}(A,W)\,=\,\frac{I(A=1)}{\hat{g}(1|W)}$$
-are the stabilized inverse probability of treatment (A) weights (IPTW),
-namelly the **clever covariates** and **I** defines an indicator
-function (note that $\hat{g}(A|W)$ is estimted from step 2).
+$$H(A,W)\,=\,\frac{I(A=1)}{\hat{g}(1|W)}-\frac{I(A=0)}{\hat{g}(0|W)}$$
+is the stabilized inverse probability of treatment (A) weight (IPTW),
+namely the **clever covariate** and **I** defines an indicator
+function (note that $\hat{g}(A|W)$ is estimated from step 2).
 
 ```{r}
 #Clever covariate and fluctuating/substitution paramteres
@@ -420,18 +420,17 @@ datatable(head(df, n = nrow(df)), options = list(pageLength = 5, digits = 3))
 ## Step 4 $\bar{Q_{n}}^{*}:\text{from}\,\bar{Q_{0}}^{0}\,\text{to}\,\bar{Q_{1}}^{1}$
 
 Afterwards, the estimated probability of the potential outcomes is
-updated by the substitution parameters
-$(\hat{\epsilon_{0}}\,,\,\hat{\epsilon_{1}})$. The substitution update
+updated by the substitution parameter $\hat{\epsilon}$. The substitution update
 is performed by setting A = 0 and A = 1 for each subject in the initial
 estimate probability of the potential outcomes
 $\bar{Q^{0}}(0,W)\,,\,\bar{Q^{0}}(1,W)$, as well as in the clever
-covariates $H_{0}(0,W)\;\text{and}\; H_{1}(1,W)$.
+covariate $H(A,W)$.
 
-For the $\Psi(\bar{Q_{n}}^{*})$, the updated estimate of the potential
+For $\Psi(\bar{Q_{n}}^{*})$, the updated estimate of the potential
 outcomes only needs one iteration $\Psi(\bar{Q_{n}}^{*})$ from
 $\bar{Q}^{0}(A,W)\,=>\bar{Q^{1}}(A,W)$. Therefore, model (5) targets
-$E[\hat{Y}_{A=0}]\;\text{and}\; E[\hat{Y}_{A=1}]$ simultaneously by
-including both $H_{0}(A,W)\,\text{and}\,H_{1}(A,W)$ in the model. Hence
+$E[\hat{Y}_{A=0}]\;\text{and}\; E[\hat{Y}_{A=1}]$ simultaneously via
+the clever covariate $H(A,W)$. Hence
 $\psi$ is finally estimated as follows:
 
 $$\psi TMLE,n = \Psi(Q_{n}^{*})= {\frac{1}{n}\sum_{i=1}^{n}\bar{Q}_{n}^{1}\left(1,\ W_{i}\right)-\bar{Q}_{n}^{1}\left(0,\ W_{i}\right)}.  (1)$$

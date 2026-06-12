@@ -5447,8 +5447,8 @@ stable unit treatment value assignment (SUTVA) <span class="citation">(Greenland
 <div id="the-g-formula-and-ate-estimation" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> The G-Formula and ATE
 estimation</h1>
-<p><span class="math display">\[\psi(P_{0})\,=\,\sum_{w}\,\left[\sum_{y}\,P(Y=y\mid
-A=1,W=w)-\,\sum_{y}\,P(Y = y\mid A=0,W=w)\right]P(W=w)\]</span></p>
+<p><span class="math display">\[\psi(P_{0})\,=\,\sum_{w}\,\left[\sum_{y}\,y\,P(Y=y\mid
+A=1,W=w)-\,\sum_{y}\,y\,P(Y = y\mid A=0,W=w)\right]P(W=w)\]</span></p>
 <p>where,</p>
 <p><span class="math display">\[P(Y = y \mid A = a, W = w)\,=\,\frac{P(W
 = w, A = a, Y = y)}{\sum_{y}\,P(W = w, A = a, Y = y)}\]</span><br />
@@ -5814,17 +5814,17 @@ g1W = predict(g, type =&quot;response&quot;);cat(&quot;\n Propensity score = g1W
 <p>This step aims to find a better prediction model targeted at
 minimising the mean squared error (MSE) for the potential outcomes. For
 the ATE on step convergence is guaranteed given <span class="math inline">\(\bar{Q}^{0}\)</span> and <span class="math inline">\(\hat{g}(1,W)\)</span>.</p>
-<p>The fluctuation parameters <span class="math inline">\((\hat{\epsilon}_{0}\,,\,\hat{\epsilon}_{1})\)</span>
-are estimated using maximum likelihood procedures by setting <span class="math inline">\(\text{logit}(\bar{Q^{0}}(A,W))\)</span> as an
-offset in a intercept-free logistic regression with <span class="math inline">\(H_{0}\)</span> and <span class="math inline">\(H_{1}\)</span> as independent variables:</p>
+<p>The fluctuation parameter <span class="math inline">\(\hat{\epsilon}\)</span>
+is estimated using maximum likelihood by setting <span class="math inline">\(\text{logit}(\bar{Q^{0}}(A,W))\)</span> as an
+offset in a intercept-free logistic regression with the <strong>clever covariate</strong> <span class="math inline">\(H(A,W)\)</span> as independent variable:</p>
 <p><span class="math display">\[\bar{Q^{1}}(A,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(A,
-W)\right)\,+\,\hat{\epsilon_{0}}H_{0}(A,W)\,+\,\hat{\epsilon_{1}}H_{1}(A,W)\right]  (5)\]</span>
-<span class="math display">\[\bar{Q^{1}}(0,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(A,W)\right)\,+\,\hat{\epsilon_{0}}H_{0}(0,W)\right]\]</span></p>
-<p><span class="math display">\[\bar{Q^{1}}(1,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(A,W)\right)\,+\,\hat{\epsilon_{1}}H_{1}(1,W)\right]\]</span>
-Where, <span class="math display">\[H_{0}(A,W)\,=\,-\frac{I(A=0)}{\hat{g}(0|W)}\;\text{and},\;H_{1}(A,W)\,=\,\frac{I(A=1)}{\hat{g}(1|W)}\]</span>
-are the stabilized inverse probability of treatment (A) weights (IPTW),
-namelly the <strong>clever covariates</strong> and <strong>I</strong>
-defines an indicator function (note that <span class="math inline">\(\hat{g}(A|W)\)</span> is estimted from step
+W)\right)\,+\,\hat{\epsilon}\,H(A,W)\right] \qquad (5)\]</span>
+<span class="math display">\[\bar{Q^{1}}(0,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(0,W)\right)\,+\,\hat{\epsilon}\,H(0,W)\right]\]</span></p>
+<p><span class="math display">\[\bar{Q^{1}}(1,W)\,=\,\text{expit}\left[\text{logit}\left(\bar{Q^{0}}(1,W)\right)\,+\,\hat{\epsilon}\,H(1,W)\right]\]</span>
+Where, <span class="math display">\[H(A,W)\,=\,\frac{I(A=1)}{\hat{g}(1|W)}-\frac{I(A=0)}{\hat{g}(0|W)}\]</span>
+is the stabilized inverse probability of treatment (A) weight (IPTW),
+namely the <strong>clever covariate</strong> and <strong>I</strong>
+defines an indicator function (note that <span class="math inline">\(\hat{g}(A|W)\)</span> is estimated from step
 2).</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
@@ -5866,17 +5866,17 @@ IPTW or clever covarites):</p>
 <div id="step-4-barq_ntextfrombarq_00texttobarq_11" class="section level2" number="8.4">
 <h2><span class="header-section-number">8.4</span> Step 4 <span class="math inline">\(\bar{Q_{n}}^{*}:\text{from}\,\bar{Q_{0}}^{0}\,\text{to}\,\bar{Q_{1}}^{1}\)</span></h2>
 <p>Afterwards, the estimated probability of the potential outcomes is
-updated by the substitution parameters <span class="math inline">\((\hat{\epsilon_{0}}\,,\,\hat{\epsilon_{1}})\)</span>.
+updated by the substitution parameter <span class="math inline">\(\hat{\epsilon}\)</span>.
 The substitution update is performed by setting A = 0 and A = 1 for each
 subject in the initial estimate probability of the potential outcomes
-<span class="math inline">\(\bar{Q^{0}}(0,W)\,,\,\bar{Q^{0}}(1,W)\)</span>, as
-well as in the clever covariates <span class="math inline">\(H_{0}(0,W)\;\text{and}\; H_{1}(1,W)\)</span>.</p>
-<p>For the <span class="math inline">\(\Psi(\bar{Q_{n}}^{*})\)</span>,
+<span class="math inline">\(\bar{Q^{0}}(0,W)\,,\,\bar{Q^{0}}(1,W)\)</span>, and
+the corresponding values of the clever covariate <span class="math inline">\(H(0,W)\)</span> and <span class="math inline">\(H(1,W)\)</span>.</p>
+<p>For <span class="math inline">\(\Psi(\bar{Q_{n}}^{*})\)</span>,
 the updated estimate of the potential outcomes only needs one iteration
 <span class="math inline">\(\Psi(\bar{Q_{n}}^{*})\)</span> from <span class="math inline">\(\bar{Q}^{0}(A,W)\,=&gt;\bar{Q^{1}}(A,W)\)</span>.
 Therefore, model (5) targets <span class="math inline">\(E[\hat{Y}_{A=0}]\;\text{and}\;
-E[\hat{Y}_{A=1}]\)</span> simultaneously by including both <span class="math inline">\(H_{0}(A,W)\,\text{and}\,H_{1}(A,W)\)</span> in the
-model. Hence <span class="math inline">\(\psi\)</span> is finally
+E[\hat{Y}_{A=1}]\)</span> simultaneously via
+the clever covariate <span class="math inline">\(H(A,W)\)</span>. Hence <span class="math inline">\(\psi\)</span> is finally
 estimated as follows:</p>
 <p><span class="math display">\[\psi TMLE,n = \Psi(Q_{n}^{*})=
 {\frac{1}{n}\sum_{i=1}^{n}\bar{Q}_{n}^{1}\left(1,\
