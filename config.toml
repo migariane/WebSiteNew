@@ -138,32 +138,32 @@ enableEmoji = true
   [[menu.header]]
     name = "Home"
     title = "About MALF"
-    url = "home/about"
+    url = "/"
     weight = 1
   [[menu.header]]
     name = "Publications"
-    title = "publications_selected"
-    url = "home/publications_selected"
+    title = "publications"
+    url = "/publication/"
     weight = 2
   [[menu.header]]
     name = "Projects"
     title = "Project Portfolio"
-    url = "home/projects"
+    url = "/project/"
     weight = 3
   [[menu.header]]
     name = "Talks"
     title = "Talks"
-    url = "home/talks"
+    url = "/talk/"
     weight = 4
   [[menu.header]]
     name = "Teaching"
     title = "teaching"
-    url = "home/teaching"
+    url = "/home/teaching/"
     weight = 5
   [[menu.header]]
     name = "Contact"
     title = "contact"
-    url = "home/contact"
+    url = "/home/contact/"
     weight = 6
     
   # Configure footer
