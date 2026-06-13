@@ -115,7 +115,7 @@ enableEmoji = true
 
   [[params.social]]
     icon = "google-scholar"
-    icon_pack = "ai"
+    icon_pack = "fab"
     url = "https://scholar.google.es/citations?user=lA11XToAAAAJ&hl"
 
   [[params.social]]
@@ -124,8 +124,8 @@ enableEmoji = true
     url = "//github.com/migariane"
   
   [[params.social]]
-    icon      = "orcid" # icon name without the 'fa-'
-    icon_pack = "ai"
+    icon      = "orcid"
+    icon_pack = "fab"
     url       = "https://orcid.org/0000-0001-6683-5164"
 
 [taxonomies]
