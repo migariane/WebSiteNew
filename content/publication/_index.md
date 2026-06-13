@@ -1,18 +1,9 @@
 +++
 title = "Publications"
-date = "2017-01-01T00:00:00Z"
-math = false
-highlight = false
-
-# List format.
-#   0 = Simple
-#   1 = Detailed
-#   2 = APA
-#   3 = MLA
-list_format = 3
-
-# Optional featured image (relative to `static/img/` folder).
-[header]
-image = ""
-caption = ""
+description = "Peer-reviewed articles, preprints, and technical reports"
+layout = "list"
+show_post_thumbnail = true
+show_author_byline = false
+show_post_date = true
+show_button_links = true
 +++
