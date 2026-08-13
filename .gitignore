@@ -9,3 +9,6 @@ resources/
 
 # Local Netlify folder
 .netlify
+
+/.quarto/
+**/*.quarto_ipynb

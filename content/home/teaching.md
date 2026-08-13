@@ -17,6 +17,10 @@ weight = 60
 
 I am an Associate Professor of Biostatistics at the University of Granada (Department of Statistics and Operations Research) and a Distance Learning Module Organizer for the MSc in Epidemiology at the LSHTM.
 
+## 📖 Book
+
+**[Computational Causal Inference for Applied Researchers](https://migariane.github.io/Causal-Inference-Book/)** — A comprehensive open-access Quarto book (with Matthew J. Smith). 9 chapters covering potential outcomes, DAGs, regression adjustment, G-formula, propensity scores, AIPW, TMLE, longitudinal data, mediation, and sensitivity analysis. With ~65 reproducible R and Stata code examples and 71 references. [Read online](https://migariane.github.io/Causal-Inference-Book/) · [GitHub](https://github.com/migariane/Causal-Inference-Book)
+
 ## Courses
 
 - **EPM304** — Advanced Statistical Methods in Epidemiology (LSHTM)
